@@ -66,7 +66,7 @@ FLAGS = flags.FLAGS
 RATE = 16000
 CHUNK = int(RATE * FLAGS.sample_length)  # 3 sec chunks
 
-PATH_TO_ROOTDIR = "/Users/dyukita/Documents/Processing/"
+PATH_TO_ROOTDIR = "xxxxxxx"
 BACKRECORD_THRESH = 0.25
 IP = "127.0.0.1"
 PORT = 10001
