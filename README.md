@@ -13,4 +13,10 @@ Whenever laughter is detected the Processing file would play a gong sound, and t
 An example of the output video
 [![EXAMPLE VIDEO](https://img.youtube.com/vi/LwZKfXWDZ-0/0.jpg)](https://www.youtube.com/watch?v=LwZKfXWDZ-0)
 
-**There is a bug in the code that makes the audio of the output video about 1 second faster than the image. Will be fixed (soon) (probably).**
+~~**There is a bug in the code that makes the audio of the output video about 1 second faster than the image. Will be fixed (soon) (probably).**~~
+**Fine tuned so that it more or less matches (2020/02/27)**
+
+### HOW TO USE
+1. run BackRecordLaughter.pde on Processing (I use version 3.5.3)
+2. open terminal, cd to this directory and run `sh start.sh`
+3. Laugh!

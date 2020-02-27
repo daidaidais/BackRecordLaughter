@@ -66,8 +66,8 @@ FLAGS = flags.FLAGS
 RATE = 16000
 CHUNK = int(RATE * FLAGS.sample_length)  # 3 sec chunks
 
-PATH_TO_ROOTDIR = "PATH TO THIS DIRECTORY"
-BACKRECORD_THRESH = 0.8
+PATH_TO_ROOTDIR = "/Users/dyukita/Documents/Processing/"
+BACKRECORD_THRESH = 0.25
 IP = "127.0.0.1"
 PORT = 10001
 
@@ -150,7 +150,7 @@ if __name__ == '__main__':
                         #use ffmpeg to concatenate currently saved wav files into one file
                         os.system("sh recording/concat.sh")
                         #use ffmpeg to concatenate audio with jpeg frames from Processing
-                        ffmpeg = "ffmpeg -r 10 -start_number " + str((ts - 13) % 10000000) + "1 -i " + PATH_TO_ROOTDIR + "BackRecordLaughter/data/" + str((ts - 13) / 10000000) + "%8d.jpg -i " + PATH_TO_ROOTDIR + "BackRecordLaughter/LaughDetection-master/recording/output/output.wav -vcodec libx264 -pix_fmt yuv420p -r 30 " + PATH_TO_ROOTDIR + "BackRecordLaughter/data/output/" + str(ts - 13) + ".mp4"
+                        ffmpeg = "ffmpeg -r 10 -start_number " + str((ts - 12) % 10000000) + "1 -i " + PATH_TO_ROOTDIR + "BackRecordLaughter/data/" + str((ts - 12) / 10000000) + "%8d.jpg -i " + PATH_TO_ROOTDIR + "BackRecordLaughter/LaughDetection-master/recording/output/output.wav -vcodec libx264 -pix_fmt yuv420p -r 30 " + PATH_TO_ROOTDIR + "BackRecordLaughter/data/output/" + str(ts - 12) + ".mp4"
                         os.system(ffmpeg)
 
 
